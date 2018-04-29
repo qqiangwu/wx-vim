@@ -5,6 +5,9 @@
   + `let mapleader = ','`
   + `nnoremap <silent> <leader>ge :Gedit<CR>`
 
+# 基于Project的vim配置
++ 在.root/conf.vim中添加局部配置
+
 # h/cpp切换
 + A：切换
 + AS、AV：切换 + split
