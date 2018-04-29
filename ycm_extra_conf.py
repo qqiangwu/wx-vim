@@ -54,12 +54,14 @@ flags = [
 # For a C project, you would set this to 'c' instead of 'c++'.
 '-x',
 'c++',
+#'-isystem',
+#'../pybind11',
+#'-isystem',
+#'../BoostParts',
+#'-isystem',
+#get_python_inc(),
 '-isystem',
-'../pybind11',
-'-isystem',
-'../BoostParts',
-'-isystem',
-get_python_inc(),
+'/usr/include/c++/7/',
 '-isystem',
 '../llvm/include',
 '-isystem',
@@ -84,7 +86,7 @@ get_python_inc(),
 # which is required for compiling the standard library, and to 'c++11' for older
 # versions.
 if platform.system() != 'Windows':
-  flags.append( '-std=c++11' )
+  flags.append( '-std=c++17' )
 
 
 # Set this to the absolute path to the folder (NOT the file!) containing the

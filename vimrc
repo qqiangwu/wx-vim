@@ -1,3 +1,4 @@
+source ~/.wx-vim/basic.vim
 source ~/.wx-vim/plug.vim
 
 " Plugins
@@ -77,12 +78,13 @@ call plug#begin('~/.wx-vim/plugged')
 
     " Git diff
     Plug 'mhinz/vim-signify'
+    nnoremap <silent> <leader>diff :SignifyDiff<CR>
 
     " Text obj
     Plug 'kana/vim-textobj-user'
     Plug 'kana/vim-textobj-indent'
     Plug 'kana/vim-textobj-syntax'
-    Plug 'kana/vim-textobj-function', { 'for':['c', 'cpp', 'vim', 'java'] }
+    Plug 'kana/vim-textobj-function', { 'for':['c', 'cpp', 'vim' ] }
     Plug 'sgur/vim-textobj-parameter'
 
     " Highlight
@@ -97,11 +99,11 @@ call plug#begin('~/.wx-vim/plugged')
     let g:Lf_ShortcutF = '<c-p>'
     let g:Lf_ShortcutB = '<m-n>'
     noremap <c-n> :LeaderfMru<cr>
-    noremap <m-p> :LeaderfFunction<cr>
-    noremap <m-n> :LeaderfBuffer<cr>
-    noremap <m-m> :LeaderfTag<cr>
-    let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
+    nnoremap <silent> <leader>lf :LeaderfFunction<CR>
+    nnoremap <silent> <leader>lb :LeaderfBuffer<CR>
+    nnoremap <silent> <leader>lt :LeaderfTag<CR>
 
+    let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
     let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
     let g:Lf_WorkingDirectoryMode = 'Ac'
     let g:Lf_WindowHeight = 0.30
