@@ -19,6 +19,7 @@
 + 两次Esc退出
 
 # 自动补全
++ .ycm_extra_conf.py: 从当前目录向上找，没有则使用全局默认的
 + 添加系统头文件：在ycm extra conf的flag中添加头文件路径
 
 # Diff
