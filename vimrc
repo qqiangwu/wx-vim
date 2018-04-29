@@ -3,8 +3,13 @@ source ~/.wx-vim/plug.vim
 
 " Plugins
 call plug#begin('~/.wx-vim/plugged')
+    " local vimrc
+    Plug 'LucHermitte/lh-vim-lib'
+    Plug 'LucHermitte/local_vimrc'
+    let g:local_vimrc = '.root/conf.vim'
+
     " completion for cpp
-    Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer', 'for': ['cpp', 'c'] }
+    Plug 'Valloric/YouCompleteMe', { 'for': ['cpp', 'c'] }  " 'do': './install.py --clang-completer', 'for': ['cpp', 'c'] }
     let g:ycm_add_preview_to_completeopt = 0
     let g:ycm_show_diagnostics_ui = 0
     let g:ycm_server_log_level = 'info'
@@ -95,7 +100,7 @@ call plug#begin('~/.wx-vim/plugged')
     let g:cpp_experimental_template_highlight = 1
 
     " Tagbar and File switch
-    Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+    Plug 'Yggdroot/LeaderF' ", { 'do': './install.sh' }
     let g:Lf_ShortcutF = '<c-p>'
     let g:Lf_ShortcutB = '<m-n>'
     noremap <c-n> :LeaderfMru<cr>
@@ -112,6 +117,7 @@ call plug#begin('~/.wx-vim/plugged')
     let g:Lf_HideHelp = 1
     let g:Lf_StlColorscheme = 'powerline'
     let g:Lf_PreviewResult = {'Function':0}
+    let g:Lf_DefaultMode = 'FullPath'
 
     let g:Lf_NormalMap = {
         \ "File":   [["<ESC>", ':exec g:Lf_py "fileExplManager.quit()"<CR>']],
@@ -121,6 +127,9 @@ call plug#begin('~/.wx-vim/plugged')
         \ "Function":    [["<ESC>", ':exec g:Lf_py "functionExplManager.quit()"<CR>']],
         \ "Colorscheme":    [["<ESC>", ':exec g:Lf_py "colorschemeExplManager.quit()"<CR>']],
         \ }"
+    
+    " File explorer
+    Plug 'justinmk/vim-dirvish'
 
     " theme
     Plug 'altercation/vim-colors-solarized'
