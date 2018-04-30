@@ -7,6 +7,7 @@ call plug#begin('~/.wx-vim/plugged')
     Plug 'LucHermitte/lh-vim-lib'
     Plug 'LucHermitte/local_vimrc'
     let g:local_vimrc = '.root/conf.vim'
+    let g:local_vimrc_options = { 'whitelist': [$HOME] }
 
     " completion for cpp
     Plug 'Valloric/YouCompleteMe', { 'for': ['cpp', 'c'] }  " 'do': './install.py --clang-completer', 'for': ['cpp', 'c'] }
