@@ -1,5 +1,6 @@
-source ~/.wx-vim/basic.vim
 source ~/.wx-vim/plug.vim
+source ~/.wx-vim/basic.vim
+source ~/.wx-vim/keys.vim
 
 " Plugins
 call plug#begin('~/.wx-vim/plugged')
@@ -127,11 +128,38 @@ call plug#begin('~/.wx-vim/plugged')
         \ "Tag":    [["<ESC>", ':exec g:Lf_py "tagExplManager.quit()"<CR>']],
         \ "Function":    [["<ESC>", ':exec g:Lf_py "functionExplManager.quit()"<CR>']],
         \ "Colorscheme":    [["<ESC>", ':exec g:Lf_py "colorschemeExplManager.quit()"<CR>']],
-        \ }"
-    
+        \ }
+
     " File explorer
     Plug 'justinmk/vim-dirvish'
 
+    " Autoclose
+    Plug 'Townk/vim-autoclose'
+
+    " Session Manager
+    Plug 'vim-scripts/sessionman.vim'
+    nmap <leader>sl :SessionList<CR>
+    nmap <leader>ss :SessionSave<CR>
+    nmap <leader>sc :SessionClose<CR>
+
+    " Rainbox
+    Plug 'luochen1990/rainbow'
+    let g:rainbow_active = 1
+    
     " theme
     Plug 'altercation/vim-colors-solarized'
+    let g:solarized_termcolors=256
+    let g:solarized_termtrans=1
+    let g:solarized_contrast="normal"
+    let g:solarized_visibility="normal"
 call plug#end()
+
+set background=dark         " Assume a dark background
+color solarized
+if &term == 'xterm' || &term == 'screen'
+    set t_Co=256            " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
+endif
+
+if filereadable(expand("~/.vimrc.local"))
+    source ~/.vimrc.local
+endif
