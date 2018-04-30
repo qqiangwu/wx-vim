@@ -22,6 +22,7 @@
 + 选定后
   + ctrl + ]：水平打开
   + ctrl + X：垂直打开
+  + ctrl + P: preview
 + 两次Esc退出
 
 # 文件浏览
