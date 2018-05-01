@@ -1,7 +1,7 @@
 let mapleader=','
 
 " edit config
-execute "noremap <leader>reload :source ~/.vimrc<CR>"
+execute "noremap <leader>av :source ~/.vimrc<CR>"
 
 " Easier moving in tabs and windows
 " The lines conflict with the default digraph mapping of <C-K>
@@ -14,6 +14,7 @@ map <C-H> <C-W>h<C-W>_
 " Wrapped lines goes down/up to next row, rather than next line in file.
 noremap j gj
 noremap k gk
+noremap ; :
 
 " Same for 0, home, end, etc
 function! WrapRelativeMotion(key, ...)
@@ -149,12 +150,12 @@ let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-au FileType go nmap <Leader>s <Plug>(go-implements)
-au FileType go nmap <Leader>i <Plug>(go-info)
-au FileType go nmap <Leader>e <Plug>(go-rename)
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <Leader>gs <Plug>(go-implements)
+au FileType go nmap <Leader>gi <Plug>(go-info)
+au FileType go nmap <Leader>ge <Plug>(go-rename)
+au FileType go nmap <leader>gr <Plug>(go-run)
+au FileType go nmap <leader>gb <Plug>(go-build)
+au FileType go nmap <leader>gt <Plug>(go-test)
 au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
-au FileType go nmap <leader>co <Plug>(go-coverage)
+au FileType go nmap <leader>gc <Plug>(go-coverage)
