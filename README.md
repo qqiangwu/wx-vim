@@ -25,12 +25,12 @@
 + , + M看tag列表
 + 使用;来分隔多个搜索单词
 + 如何选择
-  + ctrl + J： up
-  + ctrl + K： down
+  + ctrl + J： up
+  + ctrl + K： down
 + 选定后
-  + ctrl + ]：水平打开
-  + ctrl + X：垂直打开
-  + ctrl + P: preview
+  + ctrl + ]：水平打开
+  + ctrl + X：垂直打开
+  + ctrl + P: preview
 + 两次Esc退出
 
 # 文件浏览
