@@ -134,7 +134,7 @@ call plug#begin('~/.wx-vim/plugged')
     Plug 'justinmk/vim-dirvish'
 
     " Autoclose
-    Plug 'Townk/vim-autoclose'
+    " Plug 'Townk/vim-autoclose'
 
     " Session Manager
     Plug 'vim-scripts/sessionman.vim'
